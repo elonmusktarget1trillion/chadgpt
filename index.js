@@ -5,6 +5,7 @@ var cors = require('cors')
 const port = 5000
 const axios = require('axios');
 var router = express.Router();
+const fetch = require("node-fetch");
 app.use(cors());
 const getRes = async (text) => {
     const promptText  = text;
@@ -12,7 +13,7 @@ const getRes = async (text) => {
     const prompt = encodeURI(promptText)
     console.log(prompt)
 
-    var myHeaders = new Headers();
+    var myHeaders = new fetch.Headers();
     myHeaders.append("authority", "bard.google.com");
     myHeaders.append("accept", "*/*");
     myHeaders.append("accept-language", "en-US,en;q=0.7");
