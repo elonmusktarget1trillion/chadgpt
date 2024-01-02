@@ -65,7 +65,7 @@ app.get('/:msg', (req, res, next) => {
   
   res.send(getRes(msg));
   
-
+});
 app.listen(port, () => {
   console.log(`App listening on port ${port}`)
 })
